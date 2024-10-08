@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; /* Changed to Roboto */
+}
+
+body {
+    background: #F5F5F5;
+    text-align: center;
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+main h1 {
+    color: #fff;
+    font-weight: 800;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    font-size: 8vmin;
+    background-color: #fff;
+    color: #000;
+    display: flex;               
+    justify-content: center;     
+    align-items: center;         
+    flex-direction: column;      
+    padding: 10px;              
+}
+
+h1 {
+    margin-bottom: 10px;         
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #ff5945;
+    color: #fff;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 10px;            
+}
+
+.x-player {
+    color: #ff0000;
+    font-weight: bolder;
+}
+
+.o-player {
+    color: #0000ff;
+    font-weight: bolder;
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: white;
+    padding: 1rem;
+    width: 60vmin;
+    text-align: center;
+    border-radius: 10px;
+    transform: translateY(-100%);
+    animation: slideDown 0.5s forwards;
+}
+
+.popup-content p {
+    font-size: 3vmin;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+
+/* Tablets and smaller devices */
+@media (max-width: 1440px) {
+    main {
+        margin: 1rem 0;
+    }
+
+    main h1 {
+        margin-bottom: 1rem;
+    }
+
+    #game {
+        width: 90vmin;
+        height: 70vmin;
+        gap: 1vmin;
+    }
+
+    .box {
+        width: 23vmin;
+        height: 23vmin;
+        font-size: 10vmin;
+    }
+
+    #reset-btn {
+        margin-top: 1rem;
+    }
+    #reset-btn, #new-btn {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .popup-content {
+        width: 80vmin;
+    }
+
+    .popup-content p {
+        font-size: 4vmin;
+    }
+}
+
+@media (max-width: 768px) {
+
+    main {
+        margin: 1rem 0;
+    }
+
+    main h1 {
+        margin-bottom: 1rem;
+    }
+
+    #game {
+        width: 90vmin;
+        height: 70vmin;
+        gap: 1vmin;
+    }
+
+    .box {
+        width: 23vmin;
+        height: 23vmin;
+        font-size: 10vmin;
+    }
+
+    #reset-btn {
+        margin-top: 1rem;
+    }
+    #reset-btn, #new-btn {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .popup-content {
+        width: 80vmin;
+    }
+
+    .popup-content p {
+        font-size: 4vmin;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 425px) {
+    
+    main {
+        margin: 1rem 0;
+    }
+    
+    main h1 {
+        margin-bottom: 1.2rem;
+    }
+    #game {
+        width: 80vmin;
+        height: 75vmin;
+        gap: 1vmin;
+    }
+
+    .box {
+        width: 23vmin;
+        height: 23vmin;
+        font-size: 10vmin;
+    }
+
+    #reset-btn {
+        margin-top: 1.2rem;
+    }
+    #reset-btn, #new-btn {
+        padding: .8rem;
+        font-size: .8rem;
+    }
+
+    .popup-content {
+        width: 80vmin;
+    }
+
+    .popup-content p {
+        font-size: 4.5vmin;
+    }
+}
+
+/* Extra small mobile devices (320px width) */
+@media (max-width: 375px) {
+
+    main {
+        margin: 1rem 0;
+    }
+    #game {
+        width: 90vmin;
+        height: 90vmin;
+        gap: 1vmin;
+    }
+    main h1 {
+        margin-top: 1rem;
+    }
+
+    .box {
+        width: 27vmin;
+        height: 27vmin;
+        font-size: 10vmin;
+    }
+
+    #reset-btn, #new-btn {
+        padding: .8rem;
+        font-size: .8rem;
+    }
+
+    .popup-content {
+        width: 90vmin;
+    }
+
+    .popup-content p {
+        font-size: 4.5vmin;
+    }
+}
+
+@media (max-width: 320px) {
+
+    main {
+        margin: 1rem 0;
+    }
+    #game {
+        width: 90vmin;
+        height: 90vmin;
+        gap: 1vmin;
+    }
+    main h1 {
+        margin-top: 1rem;
+    }
+
+    .box {
+        width: 27vmin;
+        height: 27vmin;
+        font-size: 10vmin;
+    }
+
+    #reset-btn, #new-btn {
+        padding: .8rem;
+        font-size: .8rem;
+    }
+
+    .popup-content {
+        width: 90vmin;
+    }
+
+    .popup-content p {
+        font-size: 4.5vmin;
+    }
+}

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+
+.todoApp {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todoApp h2 {
+  color: #002765;
+  margin-bottom: 20px;
+}
+
+.addTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.addTask input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.addTask button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+#todoResult li {
+  list-style: none;
+  position: relative;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+#todoResult li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(images/unChecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+
+#todoResult .checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+#todoResult .checked::before {
+  background-image: url(images/Checked.png);
+}
+
+#todoResult span {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#todoResult span:hover {
+  background: #edeef0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+  .todoApp {
+    width: 90%;
+    padding: 30px 20px 60px;
+  }
+
+  .addTask button {
+    padding: 12px 40px;
+    font-size: 14px;
+  }
+
+  #todoResult li {
+    font-size: 15px;
+    padding: 10px 8px 10px 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todoApp {
+    width: 100%;
+    margin: 50px auto 20px;
+    padding: 20px 15px 40px;
+  }
+
+  .addTask button {
+    padding: 10px 30px;
+    font-size: 12px;
+  }
+
+  #todoResult li {
+    font-size: 14px;
+    padding: 8px 6px 8px 40px;
+  }
+
+  #todoResult span {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .todoApp {
+    width: 100%;
+    margin: 20px auto 10px;
+    padding: 15px 10px 30px;
+  }
+  .addTask input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .addTask button {
+    width: 100%;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  #todoResult li {
+    font-size: 13px;
+    padding: 8px 5px 8px 35px;
+  }
+
+  #todoResult li::before {
+    height: 24px;
+    width: 24px;
+    top: 6px;
+    left: 6px;
+  }
+  /*  */
+  #todoResult span {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
